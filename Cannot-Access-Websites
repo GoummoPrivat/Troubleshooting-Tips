@@ -1,0 +1,15 @@
+CONNECTED TO THE INTERNET BUT CANNOT ACCESS WEBSITES ON WINDOWS 10/11
+
+Problem:
+The user cannot access certain websites while connected to the internet, using a web browser.
+
+Solution
+Ensure that the computer is connected to the internet, then open cmd in admin mode and run the following commandes stepwise: 
+
+netsh winsock reset          This command will reset the windows sockets
+
+netsh int ip reset               This command will reset the TCP/IP protocol stack    
+
+ipconfig /flushdns              This command will flush or empty the DNS resolver cache
+
+Renew the Ip (ipconfig /renew) or restart the laptop.
